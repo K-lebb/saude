@@ -2589,6 +2589,11 @@ body.landing #header {
   top: 0;
   text-wrap: wrap;
 }
+#banner .content header .login-btn {
+  cursor: pointer;
+  margin-top: 1.5em;
+  font-weight: bold;
+}
 #banner .content .image {
   display: inline-block;
   height: 20em;
