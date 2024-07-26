@@ -1161,21 +1161,26 @@
 		}
 
 		&:before {
-			background-image: url('images/overlay.png');
 			content: '';
 			display: block;
 			height: 100%;
 			left: 0;
 			top: 0;
 			width: 100%;
+			background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
 		}
 
-		.image.main {
-			display: none;
+		.image.fit.main {
+			position: relative; 
 
 			img {
+				display: block;
+				width: 100%;
+				height: auto;
 				position: relative;
 			}
+				
+			
 		}
 
 		.content {
@@ -1185,6 +1190,11 @@
 			border-style: solid;
 			opacity: 1;
 			position: absolute;
+
+			h2 {
+				font-size: 2.2em;
+				font-weight: 800
+			}
 		}
 
 		.goto-next {
@@ -1236,6 +1246,10 @@
 			.content {
 				border-left-width: 0.35em;
 				right: 0;
+			}
+
+			.image.fit.main {
+				
 			}
 		}
 
@@ -1462,7 +1476,7 @@
 	}
 
 	#header {
-		background: _palette(bg);
+		background-image: #00000065;
 		box-shadow: 0 0 0.25em 0 rgba(0,0,0,0.25);
 		cursor: default;
 		height: 5em;
@@ -1483,6 +1497,7 @@
 
 			img {
 				height: 90px;
+				filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5));
 			}
 		}
 
@@ -1502,7 +1517,7 @@
 
 					a, span {
 						border: 0;
-						color: inherit;
+						color: _palette(fg-bold);
 						display: inline-block;
 						height: inherit;
 						line-height: inherit;
@@ -1539,7 +1554,7 @@
 		}
 
 		#header {
-			background: transparent;
+			// background: transparent;
 			box-shadow: none;
 			position: absolute;
 		}
@@ -1549,7 +1564,7 @@
 
 	#banner {
 		background-attachment: fixed;
-		background-color: _palette(bg);
+		background-color: _palette(clr-itp-9);
 		// background-image: url('../../images/banner.jpg');
 		background-position: center center;
 		background-size: cover;
@@ -1618,7 +1633,7 @@
 
 				img {
 					display: block;
-					margin-left: 2em;
+					margin-left: 1em;
 					height: 100%;
 					transform:rotatey(180deg);
 					

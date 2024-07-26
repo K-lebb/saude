@@ -2247,18 +2247,21 @@ input[type=button]:disabled,
   z-index: 20;
 }
 .spotlight:before {
-  background-image: url("images/overlay.png");
   content: "";
   display: block;
   height: 100%;
   left: 0;
   top: 0;
   width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
 }
-.spotlight .image.main {
-  display: none;
+.spotlight .image.fit.main {
+  position: relative;
 }
-.spotlight .image.main img {
+.spotlight .image.fit.main img {
+  display: block;
+  width: 100%;
+  height: auto;
   position: relative;
 }
 .spotlight .content {
@@ -2268,6 +2271,10 @@ input[type=button]:disabled,
   border-style: solid;
   opacity: 1;
   position: absolute;
+}
+.spotlight .content h2 {
+  font-size: 2.2em;
+  font-weight: 800;
 }
 .spotlight .goto-next {
   transform: translate(0,0);
@@ -2469,7 +2476,7 @@ body.landing .dropotron.level-0 {
 }
 
 #header {
-  background: #c1b2fd;
+  background-image: rgba(0, 0, 0, 0.3960784314);
   box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
   cursor: default;
   height: 5em;
@@ -2490,6 +2497,7 @@ body.landing .dropotron.level-0 {
 }
 #header h1 img {
   height: 90px;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
 }
 #header nav {
   position: absolute;
@@ -2507,7 +2515,7 @@ body.landing .dropotron.level-0 {
 }
 #header nav ul li a, #header nav ul li span {
   border: 0;
-  color: inherit;
+  color: #ffffff;
   display: inline-block;
   height: inherit;
   line-height: inherit;
@@ -2532,7 +2540,6 @@ body.landing #page-wrapper {
   padding-top: 0;
 }
 body.landing #header {
-  background: transparent;
   box-shadow: none;
   position: absolute;
 }
@@ -2540,7 +2547,7 @@ body.landing #header {
 /* Banner */
 #banner {
   background-attachment: fixed;
-  background-color: #c1b2fd;
+  background-color: #afa2ef;
   background-position: center center;
   background-size: cover;
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
@@ -2602,7 +2609,7 @@ body.landing #header {
 }
 #banner .content .image img {
   display: block;
-  margin-left: 2em;
+  margin-left: 1em;
   height: 100%;
   transform: rotatey(180deg);
 }
